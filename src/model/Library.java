@@ -1,28 +1,37 @@
 package model;
 
+import model.Member;
+import model.Magazine;
+import model.Document;
+import java.util.Scanner;
+
 public class Library{
 	
-	protected int Argument1;
-	int bookId[] = {1,2,3,4,5,6,7,8,9,10};
+	public void addMember(String name){
+		System.out.println("Nom du membre");
+		Scanner cs = new Scanner(System.in);
+		String addN = cs.nextLine(); 
+		Member newMember = new Member();
+		newMember.setMemberName(addN);
+	}
 	
-	protected void addMember(){
+	public static void addDocument(){
+		System.out.println("okokeee");
+	}
+	
+	public static void addHardware(){
 		
 	}
 	
-	protected void addDocument(){
-			
-	}
-	
-	protected void addHardware(){
-		
-	}
-	
-	public void showBorrowed(){
+	public static void showBorrowed(){
 	
 	}
 	
-	protected void searchDocument(String doc){
-		String sdoc = new String(doc);
-		System.out.println(sdoc);
+	public void searchDocument(){
+		System.out.println("Document à rechercher");
+		Scanner cs = new Scanner(System.in);
+		String sDoc = cs.nextLine();
+		Book myBook = new Book();
+		myBook.isAvailable(sDoc);
 	}
 }
