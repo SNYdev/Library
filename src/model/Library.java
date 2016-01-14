@@ -1,5 +1,6 @@
 package model;
 
+import java.util.*;
 import model.Member;
 import model.Magazine;
 import model.Document;
@@ -10,13 +11,13 @@ public class Library{
 	public void addMember(String name){
 		System.out.println("Nom du membre");
 		Scanner cs = new Scanner(System.in);
-		String addN = cs.nextLine(); 
+		String addN = cs.nextLine();
 		Member newMember = new Member();
 		newMember.setMemberName(addN);
 	}
 	
 	public static void addDocument(){
-		System.out.println("okokeee");
+		
 	}
 	
 	public static void addHardware(){
@@ -24,7 +25,11 @@ public class Library{
 	}
 	
 	public static void showBorrowed(){
-	
+		System.out.println("Nom du livre");
+		Scanner cs = new Scanner(System.in);
+		String sc = cs.nextLine();
+		Member newMember = new Member();
+		newMember.setLocBook();
 	}
 	
 	public void searchDocument(){

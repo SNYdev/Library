@@ -1,9 +1,10 @@
 package main;
 
+import java.util.*;
 import java.lang.Math;
 import java.util.Scanner;
 import model.Library;
-
+import model.Member;
 class Main{
 	
 	static boolean finished = false;
@@ -16,15 +17,15 @@ class Main{
 			Library myLibrary = new Library();
 			if(resp == 1){
 				String se = sc.nextLine();
-					myLibrary.addMember(se);
+				myLibrary.addMember(se);
 				} else if(resp == 2) {
-					System.out.println("Nom du livre");
+					myLibrary.showBorrowed();
 				} else if(resp == 3){
 					System.out.println("Nom du livre à rendre");
-	
 				} else if(resp == 4){
-					System.out.println("Nom du membre");
-	
+					Member myMember = new Member();
+					myMember.getMemberName();
+					System.out.println("Nom du membre : " );
 				} else if(resp == 5){
 					myLibrary.searchDocument();
 				} else if(resp == 6){
